@@ -27,7 +27,7 @@ class PermisoController extends Controller
      */
     public function crear()
     {
-        dd('crear');
+        return view('admin.permiso.crear');
     }
 
     /**
