@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Admin\Menu;
 
-class InstruccionesLavadoController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,6 @@ class InstruccionesLavadoController extends Controller
     public function index()
     {
         //
-        return dd('hola');
     }
 
     /**
@@ -22,9 +23,9 @@ class InstruccionesLavadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function crear()
     {
-        //
+        return view('admin.menu.crear');
     }
 
     /**
@@ -33,9 +34,9 @@ class InstruccionesLavadoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function guardar(Request $request)
     {
-        //
+        Menu::create($request->all());
     }
 
     /**
@@ -44,7 +45,7 @@ class InstruccionesLavadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function mostrar($id)
     {
         //
     }
@@ -55,7 +56,7 @@ class InstruccionesLavadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editar($id)
     {
         //
     }
@@ -67,7 +68,7 @@ class InstruccionesLavadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function actualizar(Request $request, $id)
     {
         //
     }
@@ -78,7 +79,7 @@ class InstruccionesLavadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function eliminar($id)
     {
         //
     }
